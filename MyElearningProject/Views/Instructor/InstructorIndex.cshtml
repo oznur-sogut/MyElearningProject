@@ -1,0 +1,41 @@
+﻿@model List<MyElearningProject.DAL.Entities.Instructor>
+@{
+    ViewBag.Title = "InstructorIndex";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Eğitmen Listesi
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Görsel</th>
+                        <th>Eğitmen Adı Soyadı</th>
+                        <th>Kurslar</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                        <th>Sitede Gör</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.InstructorID</td>
+                            <td><img src="@item.InstructorImageUrl" style="width:50px; height:50px; border-radius:50%"</td>
+                            <td>@item.InstructorName @item.InstructorSurname</td>
+                            <td><a href="/Instructor/#/" class="btn btn-outline-warning">Kurslar</a></td>
+                            <td><a href="/Instructor/DeleteInstructor/@item.InstructorID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Instructor/UpdateInstructor/@item.InstructorID" class="btn btn-outline-success">Güncelle</a></td>
+                            <td><a href="/Instructor/#/" class="btn btn-outline-info">Sitede Gör</a></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/Instructor/AddInstructor" class="btn btn-primary">Yeni Kategori Ekle</a>

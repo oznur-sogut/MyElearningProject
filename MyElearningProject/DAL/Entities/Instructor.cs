@@ -12,5 +12,6 @@ namespace MyElearningProject.DAL.Entities
         public string InstructorName { get; set; }
         [StringLength(30)]
         public string InstructorSurname { get; set; }
+        public string InstructorImageUrl { get; set; }
     }
 }
