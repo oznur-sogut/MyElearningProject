@@ -1,0 +1,30 @@
+﻿@model MyElearningProject.DAL.Entities.Testimonial
+@{
+    ViewBag.Title = "DetailTestimonial";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<h2>Referans Yorumu Detayı</h2>
+<input type="hidden" asp-for="TestimonialID" />
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Gelen Kutusu</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title"><b>@Model.TestimonialNameSurname Tarafından Yapılan Yorum</b></div>
+
+                        <div class="card-body">
+                            @Model.TestimonialComment
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <a class="btn btn-info" href="/Testimonial/TestimonialIndex">Geri Dön</a>
+    </div>
+
