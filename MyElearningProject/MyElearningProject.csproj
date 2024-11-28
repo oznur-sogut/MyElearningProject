@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
@@ -172,6 +173,10 @@
     <Compile Include="Migrations\202411261639143_mig_update_instructor.cs" />
     <Compile Include="Migrations\202411261639143_mig_update_instructor.Designer.cs">
       <DependentUpon>202411261639143_mig_update_instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.cs" />
+    <Compile Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.Designer.cs">
+      <DependentUpon>202411271447367_mig_update_instructor_coverImage_and_title.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -994,6 +999,11 @@
     <Content Include="Views\Student\StudentIndex.cshtml" />
     <Content Include="Views\Student\UpdateStudent.cshtml" />
     <Content Include="Views\Course\CourseIndex.cshtml" />
+    <Content Include="Views\Course\AddCourse.cshtml" />
+    <Content Include="Views\Course\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorAnalysis\InstructorAnalysisIndex.cshtml" />
+    <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\InstructorCommentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1047,6 +1057,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411261639143_mig_update_instructor.resx">
       <DependentUpon>202411261639143_mig_update_instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.resx">
+      <DependentUpon>202411271447367_mig_update_instructor_coverImage_and_title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
