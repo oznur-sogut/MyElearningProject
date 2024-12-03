@@ -17,5 +17,6 @@ namespace MyElearningProject.DAL.Entities
         public virtual Category Category { get; set; }
         public virtual Instructor Instructor { get; set; }
         public List<CourseRegister> CourseRegisters { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

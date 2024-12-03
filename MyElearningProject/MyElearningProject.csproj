@@ -138,6 +138,7 @@
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
+    <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
@@ -177,6 +178,14 @@
     <Compile Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.cs" />
     <Compile Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.Designer.cs">
       <DependentUpon>202411271447367_mig_update_instructor_coverImage_and_title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412031055510_mig_add_comment.cs" />
+    <Compile Include="Migrations\202412031055510_mig_add_comment.Designer.cs">
+      <DependentUpon>202412031055510_mig_add_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412031108374_mig_add_relation_comment.cs" />
+    <Compile Include="Migrations\202412031108374_mig_add_relation_comment.Designer.cs">
+      <DependentUpon>202412031108374_mig_add_relation_comment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1004,6 +1013,7 @@
     <Content Include="Views\InstructorAnalysis\InstructorAnalysisIndex.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorCommentPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListByInstructorPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1060,6 +1070,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411271447367_mig_update_instructor_coverImage_and_title.resx">
       <DependentUpon>202411271447367_mig_update_instructor_coverImage_and_title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412031055510_mig_add_comment.resx">
+      <DependentUpon>202412031055510_mig_add_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412031108374_mig_add_relation_comment.resx">
+      <DependentUpon>202412031108374_mig_add_relation_comment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
