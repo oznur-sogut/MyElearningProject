@@ -1,0 +1,12 @@
+﻿@model List<MyElearningProject.DAL.Entities.Process>
+@{
+    Layout = null;
+    int count = 0;
+}
+
+<h3>Kurs Listeniz</h3>
+@foreach (var item in Model)
+{
+    count++;
+    <p>@count. Kurs - @item.Course.CourseTitle</p>
+}
