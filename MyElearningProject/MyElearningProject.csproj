@@ -127,8 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
@@ -139,8 +142,10 @@
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
+    <Compile Include="DAL\Entities\Address.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
+    <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
@@ -198,6 +203,18 @@
     <Compile Include="Migrations\202412041202261_mig_add_process.cs" />
     <Compile Include="Migrations\202412041202261_mig_add_process.Designer.cs">
       <DependentUpon>202412041202261_mig_add_process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412050821592_mig_update_aboutIcon_name.cs" />
+    <Compile Include="Migrations\202412050821592_mig_update_aboutIcon_name.Designer.cs">
+      <DependentUpon>202412050821592_mig_update_aboutIcon_name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412051153057_mig_add_contact.cs" />
+    <Compile Include="Migrations\202412051153057_mig_add_contact.Designer.cs">
+      <DependentUpon>202412051153057_mig_add_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412051208403_mig_add_address.cs" />
+    <Compile Include="Migrations\202412051208403_mig_add_address.Designer.cs">
+      <DependentUpon>202412051208403_mig_add_address.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1029,6 +1046,12 @@
     <Content Include="Views\Login\LoginIndex.cshtml" />
     <Content Include="Views\Profile\ProfileIndex.cshtml" />
     <Content Include="Views\Profile\MyCourseList.cshtml" />
+    <Content Include="Views\About\AboutIndex.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\Contact\ContactIndex.cshtml" />
+    <Content Include="Views\Address\AddressIndex.cshtml" />
+    <Content Include="Views\Address\UpdateAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1097,6 +1120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412041202261_mig_add_process.resx">
       <DependentUpon>202412041202261_mig_add_process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412050821592_mig_update_aboutIcon_name.resx">
+      <DependentUpon>202412050821592_mig_update_aboutIcon_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412051153057_mig_add_contact.resx">
+      <DependentUpon>202412051153057_mig_add_contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412051208403_mig_add_address.resx">
+      <DependentUpon>202412051208403_mig_add_address.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

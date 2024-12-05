@@ -10,6 +10,6 @@ namespace MyElearningProject.DAL.Entities
         public int AboutID { get; set; }
         public string AboutTitle { get; set; }
         public string AboutSubtitle { get; set; }
-        public string AboutCard { get; set; }
+        public string AboutIcon { get; set; }
     }
 }

@@ -1,0 +1,30 @@
+﻿@model MyElearningProject.DAL.Entities.Address
+@{
+    ViewBag.Title = "UpdateAddress";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<h2>Adres Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" name="AddressID" value="@Model.AddressID" />
+    <br />
+    <label>Adres Açıklaması</label>
+    <br />
+    <input type="text" name="AddressDescription" value="@Model.AddressDescription" class="form-control" required />  @*required girilmesi zorulu alanı ifade eder*@
+    <br />
+    <label>Adres Bilgisi</label>
+    <br />
+    <input type="text" name="AddressDetail" value="@Model.AddressDetail" class="form-control" required />
+    <br />
+    <label>Mail Adresi</label>
+    <br />
+    <input type="email" name="AddressMail" value="@Model.AddressMail" class="form-control" required />
+    <br />
+    <label>Telefon Numarası</label>
+    <br />
+    <input type="tel" name="AddressPhone" value="@Model.AddressPhone" class="form-control" required />
+    <br />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+

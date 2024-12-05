@@ -1,0 +1,22 @@
+﻿@model MyElearningProject.DAL.Entities.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<h2>E-Learning Hakkında Kart Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" name="AboutID" value="@Model.AboutID" />
+    <br />
+    <br />
+    <label>Kart Başlığı</label>
+    <input type="text" name="AboutTitle" value="@Model.AboutTitle" class="form-control"/>
+    <br /> <label>Kart Hakkında Bilgi</label>
+    <input type="text" name="AboutSubtitle" value="@Model.AboutSubtitle" class="form-control"/>
+    <br /> <label>Kart İkonu</label>
+    <input type="text" name="AboutIcon" value="@Model.AboutIcon" class="form-control"/>
+    <br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

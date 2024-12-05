@@ -1,0 +1,39 @@
+﻿@model List<MyElearningProject.DAL.Entities.Address>
+@{
+    ViewBag.Title = "AddressIndex";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Adres Listesi
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Adres Açıklaması</th>
+                        <th>Adres Bilgisi</th>
+                        <th>Telefon</th>
+                        <th>Mail</th>
+                        <th>Güncelle</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AddressID</td>
+                            <td>@item.AddressDescription</td>
+                            <td>@item.AddressDetail</td>
+                            <td>@item.AddressPhone</td>
+                            <td>@item.AddressMail</td>
+                            <td><a href="/Address/UpdateAddress/@item.AddressID" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
