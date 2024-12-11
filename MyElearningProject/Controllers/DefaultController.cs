@@ -1,4 +1,5 @@
 ﻿using MyElearningProject.DAL.Context;
+using MyElearningProject.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,30 @@ namespace MyElearningProject.Controllers
             ViewBag.categoryCount= context.Categories.Select(x=>x.CategoryID).Count();
             var value = context.Categories.ToList();
             return PartialView(value);
+        }
+        public PartialViewResult PartialCourses()
+        {
+            ViewBag.studentCount=context.Courses.Select(x=>x.CourseID).Count();
+            var value=context.Courses.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialInstructor()
+        {
+            var value=context.Instructors.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialStudent()
+        {
+            var value=context.Students.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialScript()
+        {
+            return PartialView();
         }
     }
 }

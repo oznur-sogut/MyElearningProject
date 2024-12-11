@@ -7,10 +7,18 @@
 <h2>Yeni Kurs Ekleme Sayfası</h2>
 <form method="post">
     <label>Kurs Adını Giriniz</label> <br />
-    @Html.TextBoxFor(x => x.CourseTitle, new { @class = "form-control" })<br />   <label>Kurs Fiyatını Giriniz</label> <br />
-    @Html.TextBoxFor(x => x.CoursePrice, new { @class = "form-control" })<br />   <label>Kurs Süresini Giriniz</label> <br />
-    @Html.TextBoxFor(x => x.CourseDuration, new { @class = "form-control" })<br />   <label>Kurs Görseli Adresini Giriniz</label> <br />
-    @Html.TextBoxFor(x => x.CourseImageUrl, new { @class = "form-control" })<br />   <label>Kategori Seçiniz</label> <br />
+    @Html.TextBoxFor(x => x.CourseTitle, new { @class = "form-control" })
+    <br />  
+    <label>Kurs Fiyatını Giriniz</label> <br />
+    @Html.TextBoxFor(x => x.CoursePrice, new { @class = "form-control" })
+    <br />  
+    <label>Kurs Süresini Giriniz</label> <br />
+    @Html.TextBoxFor(x => x.CourseDuration, new { @class = "form-control" })
+    <br />  
+    <label>Kurs Görseli Adresini Giriniz</label> <br />
+    @Html.TextBoxFor(x => x.CourseImageUrl, new { @class = "form-control" })
+    <br />  
+    <label>Kategori Seçiniz</label> <br />
     @Html.DropDownListFor(x => x.CategoryID,(List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
     <br />
     <label> Eğitmen Seçiniz</label>

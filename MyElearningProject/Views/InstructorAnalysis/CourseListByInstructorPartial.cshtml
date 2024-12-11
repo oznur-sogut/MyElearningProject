@@ -4,7 +4,20 @@
         <div class="sl-item">
             @foreach (var item in Model)
             {
-                <a href="#" class="link"></a>@item.Instructor.InstructorName @item.Instructor.InstructorSurname <span class="sl-date">@item.CourseDuration Dakika</span>
+                var hour = 0;
+                var minutes = 0;
+                <a href="#" class="link"></a>@item.Instructor.InstructorName @item.Instructor.InstructorSurname <span class="sl-date">
+            @if (item.CourseDuration >= 60)
+                {
+                    hour = @item.CourseDuration / 60;
+                    minutes = item.CourseDuration % 60;
+                    <p>@hour saat @minutes dakika</p>
+                }
+                else
+                {
+                    <p>@minutes dakika</p>
+                }Dakika
+</span>
                 <div class="m-t-20 row">
                     <div class="col-md-3 col-xs-12"><img src="@item.CourseImageUrl" alt="user" class="img-responsive radius"></div>
                     <div class="col-md-9 col-xs-12">

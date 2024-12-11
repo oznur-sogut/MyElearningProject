@@ -16,5 +16,8 @@ namespace MyElearningProject.DAL.Entities
         public List<Course> Courses { get; set; }
         public string InstructorTitle { get; set; }
         public string InstructorCoverImage { get; set; }
+        public string InstructorInstagram { get; set; }
+        public string InstructorTwitter { get; set; }
+        public string InstructorLinkedin { get; set; }
     }
 }
