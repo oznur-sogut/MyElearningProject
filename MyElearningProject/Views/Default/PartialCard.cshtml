@@ -1,0 +1,20 @@
+﻿@model List<MyElearningProject.DAL.Entities.About>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" style="display:flex" data-wow-delay="0.2s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x @item.AboutIcon text-primary mb-4"></i>
+                            <h5 class="mb-3">@item.AboutTitle</h5>
+                            <p>@item.AboutSubtitle</p>
+                        </div>
+                    </div>
+                </div>  
+
+            }
+        </div>
+    </div>
+</div>

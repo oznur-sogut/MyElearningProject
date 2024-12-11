@@ -1,0 +1,36 @@
+﻿@model List<MyElearningProject.DAL.Entities.Carousel>
+@{
+    ViewBag.Title = "CarouselIndex";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Carousel (Galeri) Sayfası
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Resim</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CarouselID</td>
+                            <td><img src="@item.CarouselImageUrl" width="50" height="50" style="border-radius:50%">
+                            <td>@item.CarouselTitle</td>
+                            <td>@item.CarouselDescription</td>
+                            <td><a href="/CarouselAdmin/DeleteCarousel/@item.CarouselID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/CarouselAdmin/UpdateCarousel/@item.CarouselID" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/CarouselAdmin/AddCarousel/" class="btn btn-primary">Yeni Carousel Ekle</a>

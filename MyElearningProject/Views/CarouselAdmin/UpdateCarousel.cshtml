@@ -1,0 +1,23 @@
+﻿@model MyElearningProject.DAL.Entities.Carousel
+@{
+    ViewBag.Title = "UpdateCarousel";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<h2>Carousel (Galeri) Güncelleme Sayfası</h2>
+<form method="post">
+    <br />
+    <br />
+    <input type="hidden" name="CarouselID" value="@Model.CarouselID"
+    <label>Galeri Başlığı</label>
+    <input type="text" name="CarouselTitle" value="@Model.CarouselTitle" class="form-control" />
+    <br /> <label>Galeri Açıklaması</label>
+    <input type="text" name="CarouselDescription" value="@Model.CarouselDescription" class="form-control" />
+    <br /> <label>Galeri Resmi</label>
+    <input type="text" name="CarouselImageUrl" value="@Model.CarouselImageUrl" class="form-control" />
+    <br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+

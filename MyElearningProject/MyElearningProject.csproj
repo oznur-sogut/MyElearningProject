@@ -130,9 +130,11 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\CarouselAdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Address.cs" />
+    <Compile Include="DAL\Entities\Carousel.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Contact.cs" />
@@ -216,6 +219,14 @@
     <Compile Include="Migrations\202412051208403_mig_add_address.Designer.cs">
       <DependentUpon>202412051208403_mig_add_address.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412100941236_mig_add_carousel.cs" />
+    <Compile Include="Migrations\202412100941236_mig_add_carousel.Designer.cs">
+      <DependentUpon>202412100941236_mig_add_carousel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412101521179_mig_update_CategoryImageUrl.cs" />
+    <Compile Include="Migrations\202412101521179_mig_update_CategoryImageUrl.Designer.cs">
+      <DependentUpon>202412101521179_mig_update_CategoryImageUrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -273,6 +284,7 @@
     <Content Include="Templates\elearning-html-template\img\course-1.jpg" />
     <Content Include="Templates\elearning-html-template\img\course-2.jpg" />
     <Content Include="Templates\elearning-html-template\img\course-3.jpg" />
+    <Content Include="Templates\elearning-html-template\img\favicon.png" />
     <Content Include="Templates\elearning-html-template\img\team-1.jpg" />
     <Content Include="Templates\elearning-html-template\img\team-2.jpg" />
     <Content Include="Templates\elearning-html-template\img\team-3.jpg" />
@@ -1052,6 +1064,16 @@
     <Content Include="Views\Contact\ContactIndex.cshtml" />
     <Content Include="Views\Address\AddressIndex.cshtml" />
     <Content Include="Views\Address\UpdateAddress.cshtml" />
+    <Content Include="Views\Default\PageIndex.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialCarousel.cshtml" />
+    <Content Include="Views\CarouselAdmin\CarouselIndex.cshtml" />
+    <Content Include="Views\CarouselAdmin\UpdateCarousel.cshtml" />
+    <Content Include="Views\CarouselAdmin\AddCarousel.cshtml" />
+    <Content Include="Views\Default\PartialCard.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialCategories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1129,6 +1151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412051208403_mig_add_address.resx">
       <DependentUpon>202412051208403_mig_add_address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412100941236_mig_add_carousel.resx">
+      <DependentUpon>202412100941236_mig_add_carousel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412101521179_mig_update_CategoryImageUrl.resx">
+      <DependentUpon>202412101521179_mig_update_CategoryImageUrl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

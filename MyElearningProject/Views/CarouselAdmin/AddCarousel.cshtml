@@ -1,0 +1,22 @@
+﻿@model MyElearningProject.DAL.Entities.Carousel
+@{
+    ViewBag.Title = "AddCarousel";
+    Layout = "~/Views/AdminLayout/AdminIndex.cshtml";
+}
+
+<h2>Carousel (Galeri) Ekleme Sayfası</h2>
+<form method="post">
+    <br />
+    <br />
+    <label>Galeri Başlığı</label>
+    @Html.TextBoxFor(x=>x.CarouselTitle, new {@class="form-control"})
+    <br />
+    <label>Galeri Açıklaması</label>
+    @Html.TextBoxFor(x=>x.CarouselDescription, new {@class="form-control"})
+    <br />
+    <label>Galeri Resmi</label>
+    @Html.TextBoxFor(x=>x.CarouselImageUrl, new {@class="form-control"})
+    <br />
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
