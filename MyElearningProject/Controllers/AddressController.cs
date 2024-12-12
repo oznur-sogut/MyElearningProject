@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class AddressController : Controller
     {
        ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult AddressIndex()
         {
             var value= context.Addresses.ToList();

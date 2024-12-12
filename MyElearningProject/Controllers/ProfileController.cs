@@ -10,6 +10,7 @@ namespace MyElearningProject.Controllers
     public class ProfileController : Controller
     {
         ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult ProfileIndex()
         {
             var values = Session["CurrentMail"];

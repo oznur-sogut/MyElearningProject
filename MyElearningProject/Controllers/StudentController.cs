@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class StudentController : Controller
     {
         ELearningContext context = new ELearningContext();
+        [Authorize]
         public ActionResult StudentIndex()
         {
             var value = context.Students.ToList();

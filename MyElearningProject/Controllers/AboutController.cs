@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class AboutController : Controller
     {
         ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult AboutIndex()
         {
             var value= context.Abouts.ToList();

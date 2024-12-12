@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class CarouselAdminController : Controller
     {
         ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult CarouselIndex()
         {
             var value= context.Carousels.ToList();

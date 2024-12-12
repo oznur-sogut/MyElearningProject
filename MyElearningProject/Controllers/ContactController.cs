@@ -10,6 +10,7 @@ namespace MyElearningProject.Controllers
     public class ContactController : Controller
     {
         ELearningContext context=new ELearningContext();
+        [Authorize]
         public ActionResult ContactIndex()
         {
             var value= context.Contacts.ToList();

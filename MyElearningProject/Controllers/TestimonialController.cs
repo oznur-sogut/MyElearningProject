@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class TestimonialController : Controller
     {
         ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult TestimonialIndex()
         {
             var value= context.Testimonials.ToList();

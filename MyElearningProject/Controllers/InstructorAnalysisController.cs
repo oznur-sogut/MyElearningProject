@@ -10,6 +10,7 @@ namespace MyElearningProject.Controllers
     public class InstructorAnalysisController : Controller
     {
         ELearningContext context= new ELearningContext();
+        [Authorize]
         public ActionResult InstructorAnalysisIndex()
         {
             return View();

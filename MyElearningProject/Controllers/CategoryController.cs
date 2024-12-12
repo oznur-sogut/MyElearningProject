@@ -11,6 +11,7 @@ namespace MyElearningProject.Controllers
     public class CategoryController : Controller
     {
         ELearningContext context = new ELearningContext();
+        [Authorize]
         public ActionResult CategoryIndex()
         {
             var value = context.Categories.ToList();

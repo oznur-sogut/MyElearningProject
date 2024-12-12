@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CarouselAdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1088,6 +1089,7 @@
     <Content Include="Views\Default\PartialStudent.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Default\PartialScript.cshtml" />
+    <Content Include="Views\ContactPage\ContactPageIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

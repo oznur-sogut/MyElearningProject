@@ -8,7 +8,7 @@ namespace MyElearningProject.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
+        [Authorize]
         public ActionResult AdminIndex()
         {
             return View();
