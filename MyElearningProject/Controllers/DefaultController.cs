@@ -62,7 +62,11 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialFooter()
         {
-            return PartialView();
+            ViewBag.detail= context.Addresses.Select(x=>x.AddressDetail).FirstOrDefault();
+            ViewBag.phone= context.Addresses.Select(x=>x.AddressPhone).FirstOrDefault();
+            ViewBag.mail= context.Addresses.Select(x=>x.AddressMail).FirstOrDefault();
+            var value = context.Categories.ToList();
+            return PartialView(value);
         }
         public PartialViewResult PartialScript()
         {
